@@ -127,7 +127,7 @@ int main() {
 
 	sa.sa_handler = handle;
 	sigemptyset(&sa.sa_mask);
-	sa.sa_flags = SA_RESTART;
+	sa.sa_flags = SA_SIGINFO;
 	if(sigaction(SIGINT, &sa, NULL) != 0) {
 		perror("sigaction");
 	}
@@ -141,7 +141,7 @@ int main() {
 
 	for(;;) {
 		length = read(STDIN_FILENO, &ascii, sizeof(ascii));
-		if(running != 0) {
+		if(running != 1) {
 			break;
 		}
 		if(length <= 0) {
