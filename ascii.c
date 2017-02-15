@@ -18,8 +18,9 @@ void send_ascii(char val) {
 		case '7': key = KEY_7; break;
 		case '8': key = KEY_8; break;
 		case '9': key = KEY_9; break;
-		case '0': key = KEY_0; break;
-					 // Shift 1234 Row
+		case '-': key = KEY_MINUS; break;
+		case '=': key = KEY_EQUAL; break;
+		 // Shift 1234 Row
 		case '!': key = KEY_1; lshift = 1; break;
 		case '@': key = KEY_2; lshift = 1; break;
 		case '#': key = KEY_3; lshift = 1; break;
@@ -30,7 +31,9 @@ void send_ascii(char val) {
 		case '*': key = KEY_8; lshift = 1; break;
 		case '(': key = KEY_9; lshift = 1; break;
 		case ')': key = KEY_0; lshift = 1; break;
-					 // QWER row
+		case '_': key = KEY_MINUS; lshift = 1; break;
+		case '+': key = KEY_EQUAL; lshift = 1; break;
+		 // QWER row
 		case 'q': key = KEY_Q; break;
 		case 'w': key = KEY_W; break;
 		case 'e': key = KEY_E; break;
@@ -41,7 +44,10 @@ void send_ascii(char val) {
 		case 'i': key = KEY_I; break;
 		case 'o': key = KEY_O; break;
 		case 'p': key = KEY_P; break;
-					 // Shift QWER row
+		case '[': key = KEY_LEFTBRACE; break;
+		case ']': key = KEY_RIGHTBRACE; break;
+		case '\\': key = KEY_BACKSLASH; break;
+		 // Shift QWER row
 		case 'Q': key = KEY_Q; lshift = 1; break;
 		case 'W': key = KEY_W; lshift = 1; break;
 		case 'E': key = KEY_E; lshift = 1; break;
@@ -52,7 +58,10 @@ void send_ascii(char val) {
 		case 'I': key = KEY_I; lshift = 1; break;
 		case 'O': key = KEY_O; lshift = 1; break;
 		case 'P': key = KEY_P; lshift = 1; break;
-					 // ASDF row
+		case '{': key = KEY_LEFTBRACE; lshift = 1; break;
+		case '}': key = KEY_RIGHTBRACE; lshift = 1; break;
+		case '|': key = KEY_BACKSLASH; lshift = 1; break;
+		 // ASDF row
 		case 'a': key = KEY_A; break;
 		case 's': key = KEY_S; break;
 		case 'd': key = KEY_D; break;
@@ -62,7 +71,9 @@ void send_ascii(char val) {
 		case 'j': key = KEY_J; break;
 		case 'k': key = KEY_K; break;
 		case 'l': key = KEY_L; break;
-					 // Shift ASDF row
+		case ';': key = KEY_SEMICOLON; break;
+		case '\'': key = KEY_APOSTROPHE; break;
+		 // Shift ASDF row
 		case 'A': key = KEY_A; lshift = 1; break;
 		case 'S': key = KEY_S; lshift = 1; break;
 		case 'D': key = KEY_D; lshift = 1; break;
@@ -72,7 +83,9 @@ void send_ascii(char val) {
 		case 'J': key = KEY_J; lshift = 1; break;
 		case 'K': key = KEY_K; lshift = 1; break;
 		case 'L': key = KEY_L; lshift = 1; break;
-					 // ZXCV row
+		case ':': key = KEY_SEMICOLON; lshift = 1; break;
+		case '"': key = KEY_APOSTROPHE; lshift = 1; break;
+		 // ZXCV row
 		case 'z': key = KEY_Z; break;
 		case 'x': key = KEY_X; break;
 		case 'c': key = KEY_C; break;
@@ -80,7 +93,10 @@ void send_ascii(char val) {
 		case 'b': key = KEY_B; break;
 		case 'n': key = KEY_N; break;
 		case 'm': key = KEY_M; break;
-					 // Shift ZXCV row
+		case ',': key = KEY_COMMA; break;
+		case '.': key = KEY_DOT; break;
+		case '/': key = KEY_SLASH; break;
+		 // Shift ZXCV row
 		case 'Z': key = KEY_Z; lshift = 1; break;
 		case 'X': key = KEY_X; lshift = 1; break;
 		case 'C': key = KEY_C; lshift = 1; break;
@@ -88,6 +104,13 @@ void send_ascii(char val) {
 		case 'B': key = KEY_B; lshift = 1; break;
 		case 'N': key = KEY_N; lshift = 1; break;
 		case 'M': key = KEY_M; lshift = 1; break;
+		case '<': key = KEY_COMMA; lshift = 1; break;
+		case '>': key = KEY_DOT; lshift = 1; break;
+		case '?': key = KEY_SLASH; lshift = 1; break;
+		// Special Keys
+		case ' ': key = KEY_SPACE; break;
+		case '\t': key = KEY_TAB; break;
+		case '\n': key = KEY_ENTER; break;
 	}
 
 	if(lshift) {
