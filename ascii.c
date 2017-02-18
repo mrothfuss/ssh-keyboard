@@ -111,6 +111,8 @@ void send_ascii(char val) {
 		case ' ': key = KEY_SPACE; break;
 		case '\t': key = KEY_TAB; break;
 		case '\n': key = KEY_ENTER; break;
+		case 27: key = KEY_ESC; break;
+		case 127: key = KEY_BACKSPACE; break;
 	}
 
 	if(lshift) {
