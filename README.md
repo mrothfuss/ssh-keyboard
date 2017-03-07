@@ -1,14 +1,12 @@
 # ssh-keyboard
-Inject keystrokes over an SSH connection.
+Turn an SSH connection into a USB keyboard! This is ideal for sharing a keyboard with a linux computer that is not running an X11 server.
 
-
-## Rundown
+## Usage:
 1. SSH a linux computer
 2. Run sshkeyboard as root
 3. Begin typing
 
-This can be used to remotely operate a linux machine as if you were directly using a USB keyboard.
+## Notes:
+Not all keys have been implemented, I've only added what I've needed (printable ASCII)
 
-## Potential Uses:
- - Launching an X11 server remotely
- - Sending keystrokes to a GUI remotely
+This small program uses the US keyboard layout
